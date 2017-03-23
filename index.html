@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>359</title>
+    <link href='css/style.css' rel='stylesheet'/>
+    <link rel="stylesheet" href="fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="css/social-share-kit.css" type="text/css">
+    <script type="text/javascript" src="js/social-share-kit.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js'></script>
+
+  </head>
+
+  <body>
+    <header></header>
+    <div class="ssk-sticky ssk-left ssk-center ssk-lg">
+        <a href class="ssk ssk-facebook"></a>
+        <a href class="ssk ssk-twitter"></a>
+        <a href class="ssk ssk-linkedin"></a>
+        <a href class="ssk ssk-pinterest"></a>
+        <a href class="ssk ssk-email"></a>
+    </div>
+    <aside class="natural">
+      <div class="logo">359.io</div>
+      <div class="about">analyzing NCAA running stats.
+       <div class="left-navigation">
+            <ul class="list">
+                <h5><strong>SEARCH BY</strong></h5>
+                <li><a href="new.html" style="text-decoration:none;color:black;">NEWEST</a></li>
+                <li>TOP</li>
+                <li>FEATURED</li>
+                <h5><strong>OR CREATE YOUR OWN</strong></h5>
+            </ul>
+        </div></div>
+
+    </aside>
+    
+    <div class="top-bar">newest</div>
+  
+    <article>
+      <div class="title">NCAA 10k</div>
+      <canvas id="scatterChart" width="300" height="100"></canvas>
+      <div class="chart">
+        <script type="text/javascript">
+          var ctx = document.getElementById("scatterChart");
+          var scatterChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+            labels : ["30:30","29:30","29:00","28:30","28:00","27:30","27:00"],
+            datasets : [
+                {
+                    fillColor : "rgba(220,220,220,0.4)",
+                    label: "2009",
+                    strokeColor : "rgba(220,220,220,0.4)",
+                    pointColor : "rgba(220,220,220,1)",
+                    pointStrokeColor : "#fff",
+                    data : [400,350,200,150,100,53,20]
+                },
+                {
+                    fillColor : "#78A22F",
+                    label: "2010",
+                    strokeColor : "#78A22F",
+                    pointColor : "#78A22F",
+                    pointStrokeColor : "#78A22F",
+                    data : [420,310,180,130,120,40,10]
+                },
+                {
+                    fillColor : "#eed8ae",
+                    label: "2011",
+                    strokeColor : "#eed8a",
+                    pointColor : "#eed8a",
+                    pointStrokeColor : "#eed8a",
+                    data : [380,356,200,130,80,49,15]
+                }
+
+            ],
+              options: {
+                  scales: {
+                      xAxes: [{
+                          type: 'linear',
+                          position: 'bottom'
+                      }]
+                    }
+                }
+            }
+          });
+        </script>
+      </div>
+      <div class="desc"> &nbsp;&nbsp;Distribution of men top 500 race results of NCAA 10k from 2009, 2010, and 2011
+      </div>
+    </article>
+    <article>
+      <div class="title">Top M/W Track & Field Teams</div>
+      <canvas id="myChart" width="300" height="100"></canvas>
+      <div class="chart">
+        <!-- SELECT university,count(*) FROM `track5` GROUP BY university ORDER BY count(*) DESC -->
+        <script>
+        var ctx = document.getElementById("myChart");
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["Oregon", "Arkansas", "Minnesota", "BYU", "Stanford", "Indiana","Cornell","Georgetown","Texas A&M","Texas","Columbia",
+                "Michigan","Princeton"],
+                datasets: [{
+                    label: '# of top 500 runner',
+                    data: [912, 883, 867, 859, 835, 832, 830, 822, 806,784,770,757,741],
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(54, 162, 235, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(54, 162, 235, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero:true
+                        }
+                    }]
+                }
+            }
+        });
+      </script>
+      </div>
+      <div class="desc">Top teams ranked by number of men and women runners in the top 500 NCAA each season from 2009-2017
+      </div>
+
+    </article>
+
+
+    <article>
+      <div class="title">NCAA 10k</div>
+      <canvas id="scatterChart2" width="300" height="100"></canvas>
+      <div class="chart">
+        <script type="text/javascript">
+          var ctx = document.getElementById("scatterChart2");
+          var scatterChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                datasets: [{
+                    label: 'time distribution',
+                    data: [{
+                        x: -10,
+                        y: 0
+                    }, {
+                        x: 0,
+                        y: 10
+                    }, {
+                        x: -10,
+                        y: 5
+                    }]
+                }]
+              },
+              options: {
+                  scales: {
+                      xAxes: [{
+                          type: 'linear',
+                          position: 'bottom'
+                      }]
+                    }
+                }
+            });
+        </script>
+      </div>
+      <div class="desc"> &nbsp;&nbsp;This will be paragraph body of description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+    </article>
+
+    
+    <footer>
+      <div class="desc">[data from this site was collected from the top-500 NCAA finisher results from TFFRS]
+      </div>
+
+
+      <div class="footnote">
+          made with <i class="fa fa-keyboard-o" aria-hidden="true"></i> by <a href="http://choyle.me" target="_blank">Chris Hoyle</a>
+      </div>
+    </footer>
+
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="js/index.js"></script>
+      <script type="text/javascript">
+        SocialShareKit.init({
+          url: 'http://www.threefiftynine.io',
+          twitter: {
+              title: 'analyzing NCAA running stats.',
+          }
+      });
+      </script>
+
+  </body>
+
+</html>
