@@ -29,7 +29,7 @@ article .title{
 	letter-spacing: 1.2px; 
 	line-height: 0.8em;
 	margin-left: 80px;
-	padding-top: 10px;
+	padding-top: 35px;
 }
 .top-bar{
 	font-family: 'Cousine',sans-serif ;
@@ -83,7 +83,7 @@ body {
 }
 footer .desc{
 	text-align: center;
-	padding-top: 20px;
+	padding-top: 25px;
 }
 
 .desc{
@@ -91,7 +91,16 @@ footer .desc{
 	color: black;
 	margin: 15px;
 	font-weight: 100;
-	padding-top: 20px;	
+	/*padding-top: 20px;	*/
+	position: relative;
+	float: left;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.desc a{
+	text-decoration: none;
+	color:black;
 }
 .left-navigation{
 	height: 20px;
@@ -109,9 +118,23 @@ footer .desc{
     color:black;
 
 }
+.share{
+	
+	position: absolute;
+	float: right;
+	right:0;
+	bottom: 0;
+	margin-bottom: 15px;
+	margin-right: 15px;
+	padding: 10px;
+
+	/*padding-top: 15px;
+	padding-right: 20px;*/
+}
 .footnote{
 	position: relative;
 	text-align: center;
+	bottom:10;
 	/*padding-top: 5px;*/
 }
 
@@ -121,7 +144,7 @@ footer .desc{
 	text-decoration: none;
 	color:black;
 }
-.footnote a:hover{
+.desc a:hover{
 	background-color:black;
 	color: white;
 	padding: 3px;
